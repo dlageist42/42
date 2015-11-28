@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -13,15 +12,4 @@ char	*ft_strchr(const char *s, int c)
 		str++;
 	}
 	return (NULL);
-}
-
-int	main()
-{
-	char a = '\0';
-	char *b = "blablebloublabli";
-	char *ret;
-
-	ret = ft_strchr(b, a);
-	printf("%s", ret);
-	return (0);
 }

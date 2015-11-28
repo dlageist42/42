@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
@@ -26,13 +25,4 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 		i++;
 	}	
 	return (NULL);
-}
-
-int	main()
-{
-	char *big = "kokoasdfghjkl";
-	char *little = "sdf";
-	int n = 2;
-	printf("%s", ft_strnstr(big, little, n));
-	return (0);
 }

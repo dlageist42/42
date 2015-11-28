@@ -6,5 +6,5 @@ int	ft_isalnum(int c)
 		return (1);
 	if (ft_isdigit(c))
 		return(1);
-	return (NULL);
+	return (0);
 }

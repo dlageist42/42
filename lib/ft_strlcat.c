@@ -1,9 +1,9 @@
 #include "libft.h"
-#include <stdio.h>
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	int	i;
-	int	len;
+	size_t	len;
 	int	srclen;
 
 	i = 0;
@@ -18,15 +18,4 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	dst[len +i] = '\0';
 	return (len + srclen);
-}
-
-int	main()
-{
-	char *src = "salut";
-	char *dst = "ca va";
-	int i;
-
-	i = 5;
-	printf("%s", ft_strlcat(dst, src, i));
-	return (0);
 }

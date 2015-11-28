@@ -2,7 +2,7 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*temp;
+	char	*temp;
 
 	temp = (char *)malloc(sizeof(*temp) * n);
 	ft_memcpy(temp, src, n);
