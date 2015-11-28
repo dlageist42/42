@@ -1,6 +1,7 @@
 NAME = libft.a
 
 SOURCES = ft_bzero.c \
+	  ft_atoi.c \
 	  ft_isalnum.c \
 	  ft_isalpha.c \
 	  ft_isascii.c \
@@ -50,11 +51,11 @@ SOURCES = ft_bzero.c \
 	  ft_tolower.c \
 	  ft_toupper.c 
 
-HEADERS = includes/libft.h
+HEADERS = includes
 
 OBJECTS = $(subst .c,.o,$(SOURCES))
 
-WFLAGS = -Wall -Werror -Wextra -I includes
+WFLAGS = -Wall -Werror -Wextra -I $(HEADERS)
 
 all: $(NAME)
 

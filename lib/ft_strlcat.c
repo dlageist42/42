@@ -1,21 +1,44 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2015/11/28 13:15:00 by dlageist          #+#    #+#             */
+/*   Updated: 2015/11/28 18:34:22 by dlageist         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+#include "libft.h"
+#include <stdio.h>
+
+size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t size)
 {
-	int	i;
-	size_t	len;
-	int	srclen;
+	size_t	i;
+	size_t	dstlen;
 
 	i = 0;
-	len = ft_strlen(dst);
-	srclen = ft_strlen(src);
-	if (len > dstsize)
-		return (dstsize + srclen);
-	while ((i + len) < (dstsize - 1) && src[i])
+	while (dst[i] && i < size)
+		i++;
+	dstlen = i;
+	while (src[i - dstlen] && i < size - 1)
 	{
-		dst[len + 1] = src[i];
+		dst[i] = src[i - dstlen];
 		i++;
 	}
-	dst[len +i] = '\0';
-	return (len + srclen);
+	if (dstlen < size)
+		dst[i] = '\0';
+	return (dstlen + ft_strlen(src));
+}
+
+int	main()
+{
+	const char src[200] = "abcdefghijklmop";
+	char dst[200] = "abc";
+	size_t i = 50;
+
+	printf("%zu\n", ft_strlcat(dst, src, i));
+	printf("%zu\n", strlcat(dst, src, i));
+	return (0);
 }
