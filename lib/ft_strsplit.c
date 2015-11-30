@@ -37,11 +37,11 @@ char	**ft_strsplit(char const *s, char c)
 	if (!(tab = (char **)malloc(sizeof(*tab) * (nb_word + 1))));
 		return (NULL);
 	i = 0;
-	while ((nxt_word = ft_strchr(tok, c)))
+	while ((nxt_word = ft_strchr(word, c)))
 	{
 		if ((nxt_word - word) > 0)
 			tab[i++] = ft_strsub(s, word - s, nxt_word - word);
-		word = word_next + 1;
+		word = nxt_word + 1;
 	}
 	if ((word_next = ft_strchr(word, '\0')) - word > 0)
 		tab[i++] = ft_strsub(s, word - s, nxt_word - word);
