@@ -7,7 +7,7 @@ int	ft_size_num(int	n)
 	len = 0;
 	while (n /= 10)
 		len++;
-	return (len)
+	return (len); 
 }
 
 char	*ft_itoa(int n)
@@ -22,8 +22,6 @@ char	*ft_itoa(int n)
 		n *= -1;
 	}
 	str = (char *)malloc(len + 1);
-	if (*str == NULL)
-		return (NULL);
 	str[--len] = n % 10 + '0';
 	while (n /= 10)
 		str[--len] = n % 10 + '0';
