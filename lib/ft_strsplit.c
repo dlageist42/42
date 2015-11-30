@@ -23,27 +23,43 @@ int	ft_count_word(char const *s, char c)
 	return (count);
 }
 
+int	ft_wordlen(char	*s, char c)
+{
+	int	len;
+
+	len = 0;
+	while (*s != '\0')
+	{
+		if (*s == c)
+			s++;
+		while(*s != c && *s != '\0')
+		{
+			len++;
+			s++;
+		}
+	}
+	return (len);
+}
+
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
 	int	i;
 	int	nb_word;
-	char	*word;
-	char	*nxt_word;
-
+	
 	if (!s)
 		return (NULL);
 	nb_word = ft_count_word(s, c);
-	if (!(tab = (char **)malloc(sizeof(*tab) * (nb_word + 1))))
+	if (!(tab = (char **)malloc(sizeof(*tab) * (nb_word))))
 		return (NULL);
 	i = 0;
-	while ((nxt_word = ft_strchr(word, c)))
+	while ((nb_word--))
 	{
-		if ((nxt_word - word) > 0)
-			tab[i++] = ft_strsub(s, word - s, nxt_word - word);
-		word = nxt_word + 1;
+		while (*s == c && *s != '\0')
+			s++;
+		tab[i] = ft_strsub(s, 0, ft_wordlen((char *)s, c));
+		s += ft_wordlen;
+		i++;
 	}
-	if ((nxt_word = ft_strchr(word, '\0')) - word > 0)
-		tab[i++] = ft_strsub(s, word - s, nxt_word - word);
 	return (tab);
 }
