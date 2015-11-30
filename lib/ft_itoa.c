@@ -7,7 +7,7 @@ int	ft_size_num(int	n)
 	len = 0;
 	while (n /= 10)
 		len++;
-	return (len)
+	return (len); 
 }
 
 char	*ft_itoa(int n)
