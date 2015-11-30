@@ -22,8 +22,6 @@ char	*ft_itoa(int n)
 		n *= -1;
 	}
 	str = (char *)malloc(len + 1);
-	if (str[0] == NULL)
-		return (NULL);
 	str[--len] = n % 10 + '0';
 	while (n /= 10)
 		str[--len] = n % 10 + '0';
