@@ -34,7 +34,7 @@ char	**ft_strsplit(char const *s, char c)
 	if (!s)
 		return (NULL);
 	nb_word = ft_count_word(s, c);
-	if (!(tab = (char **)malloc(sizeof(*tab) * (nb_word + 1))));
+	if (!(tab = (char **)malloc(sizeof(*tab) * (nb_word + 1))))
 		return (NULL);
 	i = 0;
 	while ((nxt_word = ft_strchr(word, c)))
@@ -43,7 +43,7 @@ char	**ft_strsplit(char const *s, char c)
 			tab[i++] = ft_strsub(s, word - s, nxt_word - word);
 		word = nxt_word + 1;
 	}
-	if ((word_next = ft_strchr(word, '\0')) - word > 0)
+	if ((nxt_word = ft_strchr(word, '\0')) - word > 0)
 		tab[i++] = ft_strsub(s, word - s, nxt_word - word);
 	return (tab);
 }
