@@ -5,59 +5,71 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/15 08:34:42 by dlageist          #+#    #+#             */
-/*   Updated: 2016/03/15 09:25:15 by dlageist         ###   ########.fr       */
+/*   Created: 2016/03/15 07:52:31 by dlageist          #+#    #+#             */
+/*   Updated: 2016/03/15 19:43:05 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <string.h>
+#include "libft/libft.h"
 
 static int			check_stock(char **stock, char **line)
 {
-	char *ptr;
+	char			*tmp;
 
-	if ((ptr = ft_strchr(*stock, '\n')))
+	if ((tmp = ft_strchr(*stock, '\n')))
 	{
-		*ptr = '\0';
+		*tmp = '\0';
 		*line = ft_strdup(*stock);
-		*stock += ft_strlen(*stock) + 1;
+		*stock = ft_strdup(tmp + 1);
+		tmp = NULL;
 		return (1);
 	}
 	return (0);
 }
 
-int					get_next_line(int const fd, char **line)
+static int			check_read(char *buffer, char **stock, char **line)
+{
+	char			*tmp;
+
+	if ((tmp = ft_strchr(buffer, '\n')))
+	{
+		*tmp = '\0';
+		*line = ft_strjoin(*stock, buffer);
+		free(*stock);
+		*stock = ft_strdup(tmp + 1);
+		tmp = NULL;
+		free(buffer);
+		return (1);
+	}
+	return (0);
+}
+
+int					get_next_line(const int fd, char **line)
 {
 	static char		*stock = NULL;
-	char			buffer[BUFF_SIZE + 1];
+	char			*buffer;
 	int				ret;
 
-	if (stock == NULL)
-		while ((ret = read(fd, buffer, BUFF_SIZE)) > 0)
-		{
-			buffer[ret] = '\0';
-			stock = ft_strjoin(stock, buffer);
-		}
-	if (stock == NULL || ret < 0)
-		return (-1);
-	else if (check_stock(&stock, line))
-		return (1);
-	else
+	if (stock)
+		if (check_stock(&stock, line))
+			return (1);
+	buffer = ft_strnew(BUFF_SIZE);
+	while ((ret = read(fd, buffer, BUFF_SIZE)) > 0)
 	{
-		*line = ft_strdup(stock);
-		stock += ft_strlen(stock) + 1;
-		return (1);
+		buffer[ret] = '\0';
+		if (check_read(buffer, &stock, line))
+			return (1);
+		stock = ft_strjoin(stock, buffer);
 	}
-}
-
-int			main(int ac, char **av)
-{
-	int fd;
-	char *line;
-
-	fd = open(av[1], O_RDONLY);
-	get_next_line(fd, &line);
-	printf("%s\n", line);
-	return (0);
+	free(buffer);
+	buffer = NULL;
+	if (ret < 0)
+		return (-1);
+	if (stock == 0)
+		return (0);
+	*line = ft_strdup(stock);
+	free(stock);
+	stock = NULL;
+	return (1);
 }

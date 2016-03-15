@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_size_number.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/15 07:52:46 by dlageist          #+#    #+#             */
-/*   Updated: 2016/03/15 08:06:55 by dlageist         ###   ########.fr       */
+/*   Created: 2015/12/04 18:00:40 by dlageist          #+#    #+#             */
+/*   Updated: 2015/12/05 15:24:35 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include "libft/libft.h"
-# define BUFF_SIZE 32
+int		ft_size_number(int n)
+{
+	int		len;
 
-int			get_next_line(int const fd, char **line);
-
-#endif
+	len = 0;
+	if (n < 0)
+	{
+		len = 1;
+		n = -n;
+	}
+	while (n != 0)
+	{
+		n /= 10;
+		len++;
+	}
+	return (len);
+}

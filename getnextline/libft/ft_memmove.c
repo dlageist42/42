@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/15 07:52:46 by dlageist          #+#    #+#             */
-/*   Updated: 2016/03/15 08:06:55 by dlageist         ###   ########.fr       */
+/*   Created: 2015/11/28 12:58:24 by dlageist          #+#    #+#             */
+/*   Updated: 2015/12/07 16:40:31 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
-# include <fcntl.h>
-# include "libft/libft.h"
-# define BUFF_SIZE 32
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	char	*temp;
 
-int			get_next_line(int const fd, char **line);
-
-#endif
+	if (!(temp = (char *)malloc(sizeof(*temp) * n)))
+		return (NULL);
+	ft_memcpy(temp, src, n);
+	ft_memcpy(dest, temp, n);
+	free(temp);
+	return (dest);
+}
