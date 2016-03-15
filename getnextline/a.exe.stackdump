@@ -1,0 +1,6 @@
+Exception: STATUS_ACCESS_VIOLATION at eip=6111B350
+eax=0C28840C ebx=61A889D5 ecx=20000000 edx=BEBF625D esi=2067EC32 edi=00000002
+ebp=0C28840C esp=0061CB90 program=C:\Users\David\.babun\cygwin\home\David\projet\getnextline\a.exe, pid 11276, thread main
+cs=0023 ds=002B es=002B fs=0053 gs=002B ss=002B
+Stack trace:
+Frame     Function  Args
