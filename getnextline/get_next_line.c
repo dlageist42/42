@@ -6,7 +6,7 @@
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/15 07:52:31 by dlageist          #+#    #+#             */
-/*   Updated: 2016/03/15 19:43:05 by dlageist         ###   ########.fr       */
+/*   Updated: 2016/03/23 13:57:40 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int			check_stock(char **stock, char **line)
 		*line = ft_strdup(*stock);
 		*stock = ft_strdup(tmp + 1);
 		tmp = NULL;
-		return (1);
+		return (ft_strlen(*line) > 0 ? 1 : 0);
 	}
 	return (0);
 }
@@ -40,7 +40,7 @@ static int			check_read(char *buffer, char **stock, char **line)
 		*stock = ft_strdup(tmp + 1);
 		tmp = NULL;
 		free(buffer);
-		return (1);
+		return (ft_strlen(*line) > 0 ? 1 : 0);
 	}
 	return (0);
 }
@@ -63,13 +63,12 @@ int					get_next_line(const int fd, char **line)
 		stock = ft_strjoin(stock, buffer);
 	}
 	free(buffer);
-	buffer = NULL;
 	if (ret < 0)
 		return (-1);
-	if (stock == 0)
+	if (stock == NULL)
 		return (0);
 	*line = ft_strdup(stock);
 	free(stock);
 	stock = NULL;
-	return (1);
+	return (ft_strlen(*line) > 0 ? 1 : 0);
 }
