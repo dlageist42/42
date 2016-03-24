@@ -23,7 +23,7 @@ static int			check_stock(char **stock, char **line)
 		*line = ft_strdup(*stock);
 		*stock = ft_strdup(tmp + 1);
 		tmp = NULL;
-		return (ft_strlen(*line) > 0 ? 1 : 0);
+		return (1);
 	}
 	return (0);
 }
@@ -40,7 +40,7 @@ static int			check_read(char *buffer, char **stock, char **line)
 		*stock = ft_strdup(tmp + 1);
 		tmp = NULL;
 		free(buffer);
-		return (ft_strlen(*line) > 0 ? 1 : 0);
+		return (1);
 	}
 	return (0);
 }
