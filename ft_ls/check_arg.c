@@ -27,15 +27,18 @@ void		get_args(char **av)
 	}
 }
 
-int			check_arg(char **av)
+int			check_arg(int ac, char **av)
 {
-	if (av[1][0] != '-' && av[2][0] == '-')
+	if (av[1][0] == '.' && ac == 2)
 	{
-		ft_putstr("ls : ");
-		ft_putstr(av[2]);
-		ft_putstr(": No such file or directory\n");
+		no_arg(av[1]);
+		return (0);
 	}
-	if (av[1] == '-')
+	if (av[1][0] == '-')
+	{
+		get_args(ac, av);
+	}
+	if (av[1][0] == '-')
 		get_args(av);
 	return (0);		
 }

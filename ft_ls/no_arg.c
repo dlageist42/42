@@ -16,24 +16,25 @@ void		no_arg(char *path)
 {
 	DIR				*pDir;
 	struct dirent	*pDirent;
-	int				i;
 	t_list			*name;
 
 	name = NULL;
-	i = 0;
 	pDir = opendir(path);
-	while((pDirent = readdir(pDir)))
+	while((pDirent = readdir(pDir)) != NULL)
 	{
 		if (pDirent->d_name[0] != '.')
 		{
-			name->content = (char*)malloc(sizeof(t_list) * ft_strlen(pDirent->d_name));
-			name->content = ft_strdup(pDirent->d_name);
+			name = (t_list *)malloc(sizeof(t_list));
+			name->content = (char*)malloc(sizeof(char)*ft_strlen(
+				pDirent->d_name));
+			ft_strcpy(name->content, pDirent->d_name);
+			ft_putstr(name->content);
+			ft_putchar('\n');
 			name = name->next;
-			i++;
 		}
 	}
-	name->next = NULL;
-	closedir(pDir);	
+	closedir(pDir);
 }
 
-//Manque Stockage de chaque nom, tri + affichage
+
+//NE RIEN TOUCHER, FT_LS SANS RIEN MARCHE

@@ -13,14 +13,14 @@
 #include "ft_ls.h"
 
 int			main(int ac, char **av)
-{	
+{
 	if (ac == 1)
 	{
 		no_arg(".");
 		return (0);
 	}
-	//else
-		//if (check_arg(av))
-			//return (1);
+	else
+		if (check_arg(ac, av))
+			return (1);
 	return (0);	
 }

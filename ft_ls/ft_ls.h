@@ -21,6 +21,6 @@
 
 void		no_arg(char *path);
 char		**sort(char **name);
-int			check_arg(char **av);
+int			check_arg(int ac, char **av);
 
 #endif
