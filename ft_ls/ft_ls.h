@@ -19,7 +19,13 @@
 #include <stdio.h>
 #include "libft/libft.h"
 
-void		no_arg(char *path);
+typedef struct 			s_name
+{
+	char 				*name;
+	struct s_name		*next;
+}						t_dir;
+
+void		no_args(char *str);
 char		**sort(char **name);
 int			check_arg(int ac, char **av);
 
