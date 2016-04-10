@@ -1,0 +1,84 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r9p5.42.fr
+Darwin 15.4.0 x86_64
+$> date
+Tue Mar 29 17:14:19 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20160329/dlageist
+
+= Git history ==================================================================
+$> git -C /var/folders/g_/tty330557t7gx4709hs53n7h0000gq/T/tmpBGnTrk/user log --pretty='%H - %an, %ad : %s'
+51411a7afe1d96fe5f18a6051c5ea954a152138a - David LAGEISTE, Tue Mar 29 17:14:04 2016 +0200 : x
+9a41d8e06b73a2a83abc3d4f5c8be90390b1e8cb - David LAGEISTE, Tue Mar 29 16:55:58 2016 +0200 : 2
+b5379848c757359e712d40d9014567bfba4e26b3 - David LAGEISTE, Tue Mar 29 16:37:07 2016 +0200 : x
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/g_/tty330557t7gx4709hs53n7h0000gq/T/tmpBGnTrk/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  763 Mar 29 17:14 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought  102 Mar 29 17:14 aff_first_param
+drwxr-xr-x  3 deepthought  deepthought  102 Mar 29 17:14 inter
+drwxr-xr-x  3 deepthought  deepthought  102 Mar 29 17:14 rev_print
+
+/var/folders/g_/tty330557t7gx4709hs53n7h0000gq/T/tmpBGnTrk/user/aff_first_param:
+total 8
+-rw-r--r--  1 deepthought  deepthought  272 Mar 29 17:14 aff_first_param.c
+
+/var/folders/g_/tty330557t7gx4709hs53n7h0000gq/T/tmpBGnTrk/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  731 Mar 29 17:14 inter.c
+
+/var/folders/g_/tty330557t7gx4709hs53n7h0000gq/T/tmpBGnTrk/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  624 Mar 29 17:14 rev_print.c
+ 
+= inter ========================================================================
+$> clang -Wextra -Wall -Werror inter.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./r7u2mngdnmzcvlb7g0lod98g 
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./4ksi75d95ldz8tawkhvy47go "salut a tous tout le monde"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./7k92dpirctclm086rzcsp88z "salut" "a" "tous" "tout" "le" "monde"
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./f0bgyobz33of64delx981ku5 "llo" "helllo"
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+= Test 5 ===================================================
+$> ./4tld8l6h28kkyb799wmsupn6 "lkPvz85ybKM7DVc" "lv85yMVc"
+$> diff -U 3 user_output_test5 test5.output | cat -e
+--- user_output_test5	2016-03-29 17:14:22.000000000 +0200$
++++ test5.output	2016-03-29 17:14:22.000000000 +0200$
+@@ -1 +1 @@$
+-lv85yMVc`T^?$
++lv85yMVc$
+
+Diff KO :(
+Grade: 0
+
+= Final grade: 0 ===============================================================

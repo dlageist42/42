@@ -1,0 +1,80 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e1r4p18.42.fr
+Darwin 15.4.0 x86_64
+$> date
+Tue Mar 29 17:41:50 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20160329/dlageist
+
+= Git history ==================================================================
+$> git -C /var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user log --pretty='%H - %an, %ad : %s'
+3c7f5b5b222eb5ca3e37975b9a54cb6d06705dad - David LAGEISTE, Tue Mar 29 17:41:39 2016 +0200 : x
+51411a7afe1d96fe5f18a6051c5ea954a152138a - David LAGEISTE, Tue Mar 29 17:14:04 2016 +0200 : x
+9a41d8e06b73a2a83abc3d4f5c8be90390b1e8cb - David LAGEISTE, Tue Mar 29 16:55:58 2016 +0200 : 2
+b5379848c757359e712d40d9014567bfba4e26b3 - David LAGEISTE, Tue Mar 29 16:37:07 2016 +0200 : x
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1022 Mar 29 17:41 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 17:41 aff_first_param
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 17:41 inter
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 17:41 rev_print
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 17:41 union
+
+/var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user/aff_first_param:
+total 8
+-rw-r--r--  1 deepthought  deepthought  272 Mar 29 17:41 aff_first_param.c
+
+/var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  731 Mar 29 17:41 inter.c
+
+/var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  624 Mar 29 17:41 rev_print.c
+
+/var/folders/_3/p4z5jg6n7dgfnw2wp8pv673w0000gq/T/tmpgf9JbQ/user/union:
+total 8
+-rw-r--r--  1 deepthought  deepthought  717 Mar 29 17:41 union.c
+ 
+= union ========================================================================
+$> clang -Wextra -Wall -Werror union.c -o user_exe 
+
+= Test 1 ===================================================
+$> ./700es0hymsgs8pd600nch4c2 "bqwuiobqiwrvi-1,-1.-1-38901gbi" "u3bkjnqoq8dbiu1p1po,-8491"
+$> diff -U 3 user_output_test1 test1.output | cat -e
+
+Diff OK :D
+= Test 2 ===================================================
+$> ./gbtktxzm1cg4v0jdl6yo4twg "" "3u3bkjnqosbhs9q8dbiu1p1po,-8491"
+$> diff -U 3 user_output_test2 test2.output | cat -e
+
+Diff OK :D
+= Test 3 ===================================================
+$> ./3hxzgvoeqx6jycl2d6gocj8n "" ""
+$> diff -U 3 user_output_test3 test3.output | cat -e
+
+Diff OK :D
+= Test 4 ===================================================
+$> ./h0seoi1jkyn9ya51vhn9bpoo "bqkwjbwqiuqw" ""
+$> diff -U 3 user_output_test4 test4.output | cat -e
+
+Diff OK :D
+Grade: 1
+
+= Final grade: 1 ===============================================================

@@ -1,0 +1,72 @@
+= Host-specific information ====================================================
+$> hostname; uname -msr
+e2r10p1.42.fr
+Darwin 15.4.0 x86_64
+$> date
+Tue Mar 29 18:45:29 CEST 2016
+$> gcc --version
+Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/usr/include/c++/4.2.1
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+$> clang --version
+Apple LLVM version 7.3.0 (clang-703.0.29)
+Target: x86_64-apple-darwin15.4.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+
+= User files collection ========================================================
+Collecting user files from Vogsphere
+Repository URL: auto-exam/2016/c-exam-beginner/practice-exam_20160329/dlageist
+
+= Git history ==================================================================
+$> git -C /var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user log --pretty='%H - %an, %ad : %s'
+2b05ed3686fc113b087dec83b63d5484354f4b67 - David LAGEISTE, Tue Mar 29 18:45:08 2016 +0200 : x
+6f1b9ecfea91d66504cdb35f487d57b4dd6d8e3f - David LAGEISTE, Tue Mar 29 17:59:29 2016 +0200 : 3
+3c7f5b5b222eb5ca3e37975b9a54cb6d06705dad - David LAGEISTE, Tue Mar 29 17:41:39 2016 +0200 : x
+51411a7afe1d96fe5f18a6051c5ea954a152138a - David LAGEISTE, Tue Mar 29 17:14:04 2016 +0200 : x
+9a41d8e06b73a2a83abc3d4f5c8be90390b1e8cb - David LAGEISTE, Tue Mar 29 16:55:58 2016 +0200 : 2
+b5379848c757359e712d40d9014567bfba4e26b3 - David LAGEISTE, Tue Mar 29 16:37:07 2016 +0200 : x
+ 
+= Collected files ==========================================
+$> ls -lAR /var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user
+total 8
+-rw-r--r--  1 deepthought  deepthought  1544 Mar 29 18:45 __GIT_HISTORY
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 18:45 aff_first_param
+drwxr-xr-x  4 deepthought  deepthought   136 Mar 29 18:45 ft_list_size
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 18:45 inter
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 18:45 rev_print
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 18:45 sort_int_table
+drwxr-xr-x  3 deepthought  deepthought   102 Mar 29 18:45 union
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/aff_first_param:
+total 8
+-rw-r--r--  1 deepthought  deepthought  272 Mar 29 18:45 aff_first_param.c
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/ft_list_size:
+total 16
+-rw-r--r--  1 deepthought  deepthought  122 Mar 29 18:45 ft_list.h
+-rw-r--r--  1 deepthought  deepthought  226 Mar 29 18:45 ft_list_size.c
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/inter:
+total 8
+-rw-r--r--  1 deepthought  deepthought  731 Mar 29 18:45 inter.c
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/rev_print:
+total 8
+-rw-r--r--  1 deepthought  deepthought  624 Mar 29 18:45 rev_print.c
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/sort_int_table:
+total 8
+-rw-r--r--  1 deepthought  deepthought  275 Mar 29 18:45 sort_int_table.c
+
+/var/folders/tq/drry0vcs13l0kjf8rbl_q0c00000gq/T/tmpkH8qen/user/union:
+total 8
+-rw-r--r--  1 deepthought  deepthought  717 Mar 29 18:45 union.c
+ 
+= sort_int_tab =================================================================
+Nothing turned in
+Grade: 0
+
+= Final grade: 0 ===============================================================
