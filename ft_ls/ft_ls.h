@@ -19,8 +19,31 @@
 #include <stdio.h>
 #include "libft/libft.h"
 
+typedef struct 		s_path
+{
+	char 			*dirname;
+	struct s_path	*next;
+}					t_path;
+
+typedef struct 		s_args;
+{
+	char 			*arg
+	struct s_args	*next;
+}					t_args;
+
+typedef struct 		s_env
+{
+	int				l;
+	int				upr;
+	int				lowr;
+	int				t;
+	int				a;
+	t_args			*args;
+	t_path			*path;
+}					t_env;
+
 void		no_arg(char *path);
-char		**sort(char **name);
+t_list		*sort(t_list *name);
 int			check_arg(int ac, char **av);
 
 #endif
