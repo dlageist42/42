@@ -23,8 +23,12 @@ int			parsing(int fd)
 	i = 0;
 	ret = 0;
 	x = 0;
-	get_next_line(fd, &line);
-	map[0] = ft_strsplit(line, ' ');
+	while((ret = get_next_line(fd, &line)) > 0)
+	{
+		map[i] = ft_strsplit(line, ' ');
+		i++;
+	}
 	if (ret == -1)
 		return (1);
+	return (0);
 }

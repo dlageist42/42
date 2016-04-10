@@ -6,20 +6,20 @@
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 13:08:32 by dlageist          #+#    #+#             */
-/*   Updated: 2015/12/06 15:28:01 by dlageist         ###   ########.fr       */
+/*   Updated: 2016/03/21 15:26:38 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcat(char *dest, const char *src)
+char	*ft_strcat(char *s1, const char *s2)
 {
 	char *start;
 
-	start = dest;
-	dest += ft_strlen(dest);
-	while (*src)
-		*(dest++) = *(src++);
-	*dest = '\0';
+	start = s1;
+	s1 += ft_strlen(s1);
+	while (*s1)
+		*(s1++) = *(s2++);
+	*s1 = '\0';
 	return (start);
 }

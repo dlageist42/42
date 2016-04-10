@@ -19,6 +19,7 @@
 #include <stdio.h>
 #include "libft/libft.h"
 
+<<<<<<< HEAD
 typedef struct 		s_path
 {
 	char 			*dirname;
@@ -44,6 +45,16 @@ typedef struct 		s_env
 
 void		no_arg(char *path);
 t_list		*sort(t_list *name);
+=======
+typedef struct 			s_name
+{
+	char 				*name;
+	struct s_name		*next;
+}						t_dir;
+
+void		no_args(char *str);
+char		**sort(char **name);
+>>>>>>> d25b3ec2ad10246507ee98763574457ddb3e27d8
 int			check_arg(int ac, char **av);
 
 #endif

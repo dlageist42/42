@@ -24,6 +24,8 @@ int			main(int ac, char **av)
 		return (1);
 	}
 	fd = open(av[1], O_RDONLY);
-	parsing(fd);
+	if (parsing(fd))
+		return (1);
+	
 	return (0);
 }

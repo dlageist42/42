@@ -6,7 +6,7 @@
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 13:08:40 by dlageist          #+#    #+#             */
-/*   Updated: 2015/11/28 17:38:41 by dlageist         ###   ########.fr       */
+/*   Updated: 2016/03/21 15:47:18 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != (char)c && *s != '\0')
+	while (*s)
+	{
+		if (*s == c)
+			return ((char *)s);
 		s++;
-	if (*s == (char)c)
-		return ((char *)s);
+	}
 	return (NULL);
 }

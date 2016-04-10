@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   args.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,22 +12,35 @@
 
 #include "ft_ls.h"
 
-void		setenv(t_env *env, int i)
-{
-	env->l = i;
-	env->upr = i;
-	env->lowr = i;
-	env->t = i;
-	env->a = i;
-}
-
-int			main(int ac, char **av)
+void		checkParams(char *str, t_args **argument)
 {
 	int		i;
-	t_env	*env;
+	t_arg
+	i = 1;
+	while (str[i])
+	{
+		env->l += str[i] == 'l' ? 1 : 0;
+		env->l += str[i] == 'l' ? 1 : 0;
+		env->l += str[i] == 'l' ? 1 : 0;
+		env->l += str[i] == 'l' ? 1 : 0;
+		env->l += str[i] == 'l' ? 1 : 0;
+	}
+}
+void		parseArgs(int ac, char **av, t_env *env)
+{
+	int		i;
+	t_args	*argument;
+	t_path	*path;
 
-	env = (t_env *)malloc(sizeof(t_env));
-	setenv(env, 0);
-	parseArgs(ac, av, env);
-	return (0);	
+	argument = ft_lstnew(NULL, 0);
+	path = ft_lstnew(NULL, 0);
+	i = 1;
+	--ac;
+	while (i < ac)
+	{
+		if (av[i][0] == '-')
+		{
+			checkParams(av[i], &argument);
+		}
+	}
 }
