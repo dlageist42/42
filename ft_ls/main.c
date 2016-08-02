@@ -1,33 +1,82 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/03/24 14:57:10 by dlageist          #+#    #+#             */
-/*   Updated: 2016/03/24 14:57:13 by dlageist         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "ft_ls.h"
 
-void		setenv(t_env *env, int i)
+int			main(int argc, char **argv)
 {
-	env->l = i;
-	env->upr = i;
-	env->lowr = i;
-	env->t = i;
-	env->a = i;
+	DIR				*dir;
+	t_lsoption		*option;
+	int				i;
+	char			**param;
+
+	option = (t_lsoption*)malloc(sizeof(t_lsoption));
+	i = ft_parse(option, argv);
+	param = argv + i;
+	if (!option->optionr)
+		param = ft_argsort(param, 0, argc - (i + 1));
+	else
+		param = ft_argsortreverse(param, 0, argc - (i + 1));
+	if (argc == i)
+	{
+		dir = opendir(".");
+		ft_startls(dir, option, param[0], NULL);
+	}
+	else
+	{
+		option->first = 1;
+		ls_show_uk(argc - i, param, 0);
+		ls_show_reg(argc - i, param, option, 0);
+		ls_show_dir(argc - i, param, option, 0);
+	}
+	return (0);
 }
 
-int			main(int ac, char **av)
+int			ft_parse(t_lsoption *option, char **argv)
 {
-	int		i;
-	t_env	*env;
+	int i;
 
-	env = (t_env *)malloc(sizeof(t_env));
-	setenv(env, 0);
-	parseArgs(ac, av, env);
-	return (0);	
+	i = 1;
+	option->optionl = 0;
+	option->optionrr = 0;
+	option->optiona = 0;
+	option->optionr = 0;
+	option->optiont = 0;
+	option->hidden = 0;
+	if (argv[i])
+	{
+		if (ft_strcmp(argv[i], "-") == 0)
+			return (i);
+	}
+	i = ft_parsecut(option, argv, i);
+	return (i);
+}
+
+void		ft_startls(DIR *dir, t_lsoption *option, char *argv,
+		t_lsdir *lsdir)
+{
+	struct dirent	*fichier;
+	t_lsdir			*elem;
+	t_lsalign		*align;
+	t_lsdir			*temp;
+
+	if (dir == NULL)
+	{
+		elem = ft_newlst();
+		ft_addlsdir(&lsdir, elem, argv, NULL);
+	}
+	else
+	{
+		while ((fichier = readdir(dir)) != NULL)
+		{
+			elem = ft_newlst();
+			ft_addlsdir(&lsdir, elem, fichier->d_name, argv);
+		}
+	}
+	lsdir = ls_sort_lsdir(lsdir, option);
+	align = checkalign(lsdir, option);
+	temp = lsdir;
+	ft_startlscut(lsdir, option, align, dir);
+	free(align);
+	if (option->optionrr)
+		ls_recursiveon(temp, option);
 }

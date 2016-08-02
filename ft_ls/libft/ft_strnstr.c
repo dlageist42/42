@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gjensen <gjensen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/28 13:20:04 by dlageist          #+#    #+#             */
-/*   Updated: 2015/11/30 17:29:21 by dlageist         ###   ########.fr       */
+/*   Created: 2014/11/07 22:02:36 by gjensen           #+#    #+#             */
+/*   Updated: 2014/11/11 13:45:28 by gjensen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,29 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		j;
-	int		k;
-	size_t	len;
+	size_t	i;
+	char	*str1;
+	char	*ts1;
+	char	*ts2;
+	char	*ret;
 
 	i = 0;
-	j = 0;
-	k = 0;
-	len = ft_strlen(s2);
-	if (s2[0] == '\0')
-		return ((char *)s1);
-	while (s1[i] && n-- >= len)
+	str1 = (char*)s1;
+	if (s1 && s2)
 	{
-		k = i;
-		j = 0;
-		while (s1[k] == s2[j])
+		if (!*s2)
+			return ((char*)s1);
+		while (*str1++)
 		{
-			k++;
-			j++;
-			if (s2[j] == '\0')
-				return ((char *)&s1[i]);
+			ts1 = (char*)s1;
+			ts2 = (char*)s2;
+			while (*ts1 != *ts2 && *ts1 && i < n)
+				ts1++, i++;
+			ret = ts1;
+			while (*ts1 == *ts2 && *ts1++ && *ts2++ && i++ < n)
+				if (!*ts2)
+					return (ret);
 		}
-		i++;
 	}
 	return (NULL);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gjensen <gjensen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/28 13:22:54 by dlageist          #+#    #+#             */
-/*   Updated: 2016/01/15 09:40:38 by dlageist         ###   ########.fr       */
+/*   Created: 2014/11/12 19:18:52 by gjensen           #+#    #+#             */
+/*   Updated: 2014/11/17 16:28:47 by gjensen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,28 @@
 
 char	*ft_strtrim(char const *s)
 {
-	int	len;
-	int	start;
+	char	*ret;
+	size_t	slen;
+	size_t	i;
 
-	len = ft_strlen(s);
-	start = 0;
-	len--;
-	while (s[start] == '\n' || s[start] == '\t' || s[start] == ' ')
+	ret = NULL;
+	if (s)
 	{
-		start++;
-		if (!s[start])
-			return (ft_strnew(0));
+		slen = ft_strlen(s);
+		if ((ret = (char*)ft_memalloc(slen + 1)) == NULL)
+			return (NULL);
+		while (*s == ' ' || *s == '\n' || *s == '\t')
+			s++;
+		if (ft_strlen(s) == 0)
+			return (ret = ft_strnew(0));
+		i = 0;
+		while (s[i])
+			i++;
+		i--;
+		while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+			i--;
+		ft_strncpy(ret, s, i + 1);
+		return (ret);
 	}
-	while (s[len] == '\n' || s[len] == '\t' || s[len] == ' ')
-		len--;
-	return (ft_strsub(s, start, len - start + 1));
+	return (NULL);
 }

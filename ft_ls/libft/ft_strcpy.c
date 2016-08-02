@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: gjensen <gjensen@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/28 13:10:35 by dlageist          #+#    #+#             */
-/*   Updated: 2015/11/28 13:10:36 by dlageist         ###   ########.fr       */
+/*   Created: 2014/11/05 15:11:20 by gjensen           #+#    #+#             */
+/*   Updated: 2014/11/27 18:40:00 by gjensen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 char	*ft_strcpy(char *dest, const char *src)
 {
-	int	i;
+	int n;
 
-	i = 0;
-	while (src[i])
+	n = 0;
+	while (src[n])
 	{
-		dest[i] = src[i];
-		i++;
+		dest[n] = src[n];
+		n++;
 	}
-	dest[i] = '\0';
+	dest[n] = '\0';
 	return (dest);
 }
