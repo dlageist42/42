@@ -62,7 +62,8 @@ SOURCES = ft_bzero.c \
 	  ft_wordlen.c \
 	  ft_count_word.c \
 	  ft_puterr.c \
-	  ft_isescaped.c
+	  ft_isescaped.c \
+		ft_intlen.c
 
 HEADERS = ./libft.h
 

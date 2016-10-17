@@ -1,8 +1,18 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   managestart.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/10/17 13:36:46 by dlageist          #+#    #+#             */
+/*   Updated: 2016/10/17 13:47:39 by dlageist         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "ft_ls.h"
 
-static void ft_checkarg(char c)
+static void		ft_checkarg(char c)
 {
 	if (!(c == 'l' || c == 'R' || c == 'a' || c == 'r' || c == 't' || c == '-'
 				|| c == '1'))
@@ -19,7 +29,7 @@ static void ft_checkarg(char c)
 	}
 }
 
-void		showblocks(t_lsdir *lsdir, t_lsalign *align, t_lsoption *option)
+void			showblocks(t_lsdir *lsdir, t_lsalign *align, t_lsoption *option)
 {
 	if (!option->optiona)
 	{
@@ -41,7 +51,7 @@ void		showblocks(t_lsdir *lsdir, t_lsalign *align, t_lsoption *option)
 	}
 }
 
-t_lsdir		*ls_sort_lsdir(t_lsdir *lsdir, t_lsoption *option)
+t_lsdir			*ls_sort_lsdir(t_lsdir *lsdir, t_lsoption *option)
 {
 	if (option->optiont)
 	{
@@ -53,7 +63,7 @@ t_lsdir		*ls_sort_lsdir(t_lsdir *lsdir, t_lsoption *option)
 	return (lsdir);
 }
 
-void		ft_startlscut(t_lsdir *lsdir, t_lsoption *option,
+void			ft_startlscut(t_lsdir *lsdir, t_lsoption *option,
 		t_lsalign *align, DIR *dir)
 {
 	if (dir && option->optionl)
@@ -79,7 +89,7 @@ void		ft_startlscut(t_lsdir *lsdir, t_lsoption *option,
 	}
 }
 
-int			ft_parsecut(t_lsoption *option, char **argv, int i)
+int				ft_parsecut(t_lsoption *option, char **argv, int i)
 {
 	int j;
 

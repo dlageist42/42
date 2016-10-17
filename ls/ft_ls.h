@@ -1,10 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_ls.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/10/17 13:32:56 by dlageist          #+#    #+#             */
+/*   Updated: 2016/10/17 13:32:59 by dlageist         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #ifndef FT_LS_H
 # define FT_LS_H
 # include <dirent.h>
 # include <unistd.h>
-# include "libft.h"
+# include "libft/libft.h"
 # include <sys/stat.h>
 # include <sys/types.h>
 # include <pwd.h>

@@ -6,7 +6,7 @@
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 13:31:56 by dlageist          #+#    #+#             */
-/*   Updated: 2016/01/15 10:17:40 by dlageist         ###   ########.fr       */
+/*   Updated: 2016/10/17 14:01:29 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isescaped(int c);
+int					ft_intlen(int number);
 
 int					ft_toupper(int c);
 int					ft_tolower(int c);
