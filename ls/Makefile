@@ -18,11 +18,9 @@ OBJ = ft_ls.o main.o tool.o tool2.o long.o long2.o managestart.o argmanage.o rec
 
 CFLAGS = -Werror -Wall -Wextra
 
-LIB = -I ./libft/includes
+LIB = -I ./libft/libft.h
 
 $(NAME):
-	make -C libft/ fclean
-	make -C libft/
 	gcc $(CFLAGS) -c $(SRC) $(LIB) -g
 	gcc $(CFLAGS) -o $(NAME) $(OBJ) -L libft/ -lft -g
 
