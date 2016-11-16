@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   cmp_timerev.c                                      :+:      :+:    :+:   */
+/*   print_total.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/16 10:21:57 by dlageist          #+#    #+#             */
-/*   Updated: 2016/11/16 10:22:03 by dlageist         ###   ########.fr       */
+/*   Created: 2016/11/16 11:58:17 by dlageist          #+#    #+#             */
+/*   Updated: 2016/11/16 11:58:43 by dlageist         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_ls.h"
 
-BOOL	cmp_timerev(t_elst *a, t_elst *b)
+void	print_total(t_elstinfos *infos)
 {
-	return (a->lmtime < b->lmtime);
+	ft_putstr("total ");
+	ft_putnbr(infos->total);
+	ft_putchar('\n');
 }

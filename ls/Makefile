@@ -3,7 +3,7 @@ NAME = ft_ls
 SRC = main.c parse_options.c print_error.c print_entries.c new_entry.c \
 			elst_del.c elst_pop.c load_dir.c elst_add.c elst_sort.c cmp_alpha.c \
 			cmp_alpharev.c cmp_time.c cmp_timerev.c print_entry.c print_entry_long.c \
-			cmp_size.c cmp_sizerev.c
+			cmp_size.c cmp_sizerev.c print_total.c
 
 INCLUDES = -Iincludes -Ilib/libft/includes
 LIB_FLAGS = -Llib/libft -lft

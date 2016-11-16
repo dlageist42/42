@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   parse_options.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dlageist <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/16 11:10:45 by dlageist          #+#    #+#             */
+/*   Updated: 2016/11/16 11:13:26 by dlageist         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "libft.h"
+#include "../lib/libft/libft.h"
 #include "parse_options.h"
 
 static OPTS		get_option_value(char flag)
@@ -18,11 +29,12 @@ static OPTS		get_option_value(char flag)
 	return (0);
 }
 
-int			parse_options(int ac, char **av, OPTS *options, void (*f)(char c))
+int				parse_options(int ac, char **av,
+		OPTS *options, void (*f)(char c))
 {
-	int 	i;
-	char	*curr;
-	OPTS	optv;
+	int			i;
+	char		*curr;
+	OPTS		optv;
 
 	i = 0;
 	curr = NULL;
@@ -43,7 +55,7 @@ int			parse_options(int ac, char **av, OPTS *options, void (*f)(char c))
 	return (i);
 }
 
-BOOL		has_option(OPTS options, char c)
+BOOL			has_option(OPTS options, char c)
 {
 	return ((options & get_option_value(c)) > 0);
 }
