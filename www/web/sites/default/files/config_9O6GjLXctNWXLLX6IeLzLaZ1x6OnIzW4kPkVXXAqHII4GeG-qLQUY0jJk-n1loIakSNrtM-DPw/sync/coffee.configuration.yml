@@ -1,0 +1,7 @@
+coffee_menus:
+  admin: admin
+  tools: tools
+max_results: 7
+_core:
+  default_config_hash: 9-nmo7QutwY9kVgTVXa8JbifVYJGbnMNtpGNTKi8pKU
+langcode: fr

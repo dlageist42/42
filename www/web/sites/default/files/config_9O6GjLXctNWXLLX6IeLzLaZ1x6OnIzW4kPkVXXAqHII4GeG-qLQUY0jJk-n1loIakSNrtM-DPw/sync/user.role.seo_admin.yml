@@ -1,0 +1,11 @@
+uuid: 81f7d2c3-a973-4165-bfee-94ba2b2a0061
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BEZeiDKXBdshlAP1YKGo9tXTNRvgsR5ONgZ7f9qqxZE
+id: seo_admin
+label: 'SEO Admin'
+weight: -6
+is_admin: null
+permissions: {  }

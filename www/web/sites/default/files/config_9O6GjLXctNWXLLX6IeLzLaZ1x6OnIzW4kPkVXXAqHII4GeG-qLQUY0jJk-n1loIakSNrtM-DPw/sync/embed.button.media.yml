@@ -1,0 +1,24 @@
+uuid: 6d124367-d5bc-4187-863f-c81ec816721f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  module:
+    - entity_embed
+    - media_entity
+_core:
+  default_config_hash: Zyk_8hpUh7WAhESgmbVnFG8F01weaEP2nBBfXWtSJaw
+label: 'Media Library'
+id: media
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.original'
+  entity_browser: editor_media_browser
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

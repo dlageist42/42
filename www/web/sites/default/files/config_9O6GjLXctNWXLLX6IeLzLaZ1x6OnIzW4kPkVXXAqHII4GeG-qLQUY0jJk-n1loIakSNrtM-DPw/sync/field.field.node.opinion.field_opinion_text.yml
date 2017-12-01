@@ -1,0 +1,27 @@
+uuid: e560ddb3-64f4-48ef-be6c-ad0fa551681c
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opinion_text
+    - node.type.opinion
+  module:
+    - file
+id: node.opinion.field_opinion_text
+field_name: field_opinion_text
+entity_type: node
+bundle: opinion
+label: 'Texte de l''avis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

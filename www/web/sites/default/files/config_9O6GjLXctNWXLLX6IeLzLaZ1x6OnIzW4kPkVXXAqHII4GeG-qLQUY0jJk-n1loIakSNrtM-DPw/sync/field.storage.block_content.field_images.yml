@@ -1,0 +1,22 @@
+uuid: a94d1255-696b-41a7-9abb-ab1c6066d86b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - block_content
+    - media_entity
+_core:
+  default_config_hash: eEQFPG5AIyvfgsbn1MIg6E0ZuBXDACZqyFNopfvEXXE
+id: block_content.field_images
+field_name: field_images
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

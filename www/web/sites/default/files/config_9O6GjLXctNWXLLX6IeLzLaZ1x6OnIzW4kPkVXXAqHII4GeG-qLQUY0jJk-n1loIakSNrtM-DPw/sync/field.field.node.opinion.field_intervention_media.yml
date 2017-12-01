@@ -1,0 +1,28 @@
+uuid: 313593c9-6b18-4c87-be7e-96a3ffe092ef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_intervention_media
+    - node.type.intervention_media
+    - node.type.opinion
+id: node.opinion.field_intervention_media
+field_name: field_intervention_media
+entity_type: node
+bundle: opinion
+label: 'Intervention media'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      intervention_media: intervention_media
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

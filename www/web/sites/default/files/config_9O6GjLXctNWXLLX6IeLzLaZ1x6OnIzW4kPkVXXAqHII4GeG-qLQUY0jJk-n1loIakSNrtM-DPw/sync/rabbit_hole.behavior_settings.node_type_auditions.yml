@@ -1,0 +1,9 @@
+uuid: 8f27143c-d39f-411b-b1a8-21ecd675cacd
+langcode: fr
+status: true
+dependencies: {  }
+id: node_type_auditions
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

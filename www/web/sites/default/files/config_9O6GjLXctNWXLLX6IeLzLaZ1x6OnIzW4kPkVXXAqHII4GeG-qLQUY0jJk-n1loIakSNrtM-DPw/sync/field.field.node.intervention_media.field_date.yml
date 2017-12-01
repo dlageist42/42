@@ -1,0 +1,21 @@
+uuid: c3fe9e8f-dde2-4796-85cc-bf8421a39890
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date
+    - node.type.intervention_media
+  module:
+    - datetime
+id: node.intervention_media.field_date
+field_name: field_date
+entity_type: node
+bundle: intervention_media
+label: Date
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

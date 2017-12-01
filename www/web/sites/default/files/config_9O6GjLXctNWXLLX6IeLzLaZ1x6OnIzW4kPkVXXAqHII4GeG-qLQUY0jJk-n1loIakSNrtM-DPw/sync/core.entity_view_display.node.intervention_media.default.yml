@@ -1,0 +1,51 @@
+uuid: de4e99a7-dcc2-4cf2-9eb0-167e4096b8d8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.intervention_media.body
+    - field.field.node.intervention_media.field_date
+    - field.field.node.intervention_media.field_video
+    - node.type.intervention_media
+  module:
+    - datetime
+    - text
+    - user
+    - video_embed_field
+id: node.intervention_media.default
+targetEntityType: node
+bundle: intervention_media
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_video:
+    weight: 103
+    label: above
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

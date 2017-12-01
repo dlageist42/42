@@ -1,0 +1,23 @@
+uuid: 9da32359-1d33-4094-8767-9fa62de7683e
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yoast_seo
+    - node.type.article
+  module:
+    - yoast_seo
+_core:
+  default_config_hash: p1oYFPv7w3CndVnwN9rmykEArm_Jr6tMK6Isk2iOBtQ
+id: node.article.field_yoast_seo
+field_name: field_yoast_seo
+entity_type: node
+bundle: article
+label: 'Real-time SEO'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: yoast_seo

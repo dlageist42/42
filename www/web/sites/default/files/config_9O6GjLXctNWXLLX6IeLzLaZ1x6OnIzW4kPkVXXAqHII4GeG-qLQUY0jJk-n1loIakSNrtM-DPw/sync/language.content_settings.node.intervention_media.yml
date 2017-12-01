@@ -1,0 +1,11 @@
+uuid: 44437c0e-ad6d-4302-8150-b1d35ba50edd
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.intervention_media
+id: node.intervention_media
+target_entity_type_id: node
+target_bundle: intervention_media
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,22 @@
+uuid: 751db549-11fa-4fbc-90ea-f0dfe845e803
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.document
+_core:
+  default_config_hash: 9u7AbzP8rqz6WMMuG1gWemAHM-UIQUJukH03MppINTo
+id: media.document.name
+field_name: name
+entity_type: media
+bundle: document
+label: 'Media name'
+description: 'The name of this media.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: 26168eb1-2fb1-4f5e-b52f-f592a6b5badf
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: ddy1OsBbWxjwEI8VL1viD4I69qcLHOkul4BxbTqLBTs
+id: seven_primary_local_tasks
+theme: seven
+region: header
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets principaux'
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

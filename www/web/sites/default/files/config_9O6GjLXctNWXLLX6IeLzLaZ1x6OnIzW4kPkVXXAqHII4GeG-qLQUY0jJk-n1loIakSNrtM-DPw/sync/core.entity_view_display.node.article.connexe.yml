@@ -1,0 +1,43 @@
+uuid: c2dff035-50aa-49fa-90dc-255cba249842
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.connexe
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_image
+    - field.field.node.article.field_tags
+    - node.type.article
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: qVtHNxqdXB9w369AO5JB5SVhflquWqFm5xfyvYLAIlM
+id: node.article.connexe
+targetEntityType: node
+bundle: article
+mode: connexe
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  body: true
+  comment: true
+  langcode: true
+  links: true

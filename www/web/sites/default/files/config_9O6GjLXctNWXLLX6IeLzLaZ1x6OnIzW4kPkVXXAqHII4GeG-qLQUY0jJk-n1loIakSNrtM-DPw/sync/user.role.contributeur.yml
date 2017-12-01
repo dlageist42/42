@@ -1,0 +1,11 @@
+uuid: 7c0ba9ce-c739-4cf5-965b-b78154e7c455
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: AT4iXiYDHA5Xl7pUyvq6bnnbTmDU-mH68uanq4Y4iFg
+id: contributeur
+label: Contributeur
+weight: 3
+is_admin: null
+permissions: {  }

@@ -1,0 +1,6 @@
+id: security_review-trusted_hosts
+settings:
+  method: token
+_core:
+  default_config_hash: _G07yLXG6uVJEMCDLW2yGasiffmDJKur-Ze0fx0GgOI
+langcode: fr

@@ -1,0 +1,18 @@
+uuid: a33a8e45-8e1f-4ad2-9e3a-7d3896511887
+langcode: fr
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Avis
+type: opinion
+description: ''
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

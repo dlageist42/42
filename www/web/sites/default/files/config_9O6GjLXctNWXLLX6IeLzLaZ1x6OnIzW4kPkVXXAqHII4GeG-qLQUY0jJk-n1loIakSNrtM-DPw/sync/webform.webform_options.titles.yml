@@ -1,0 +1,13 @@
+uuid: 6395b282-4440-450e-95d9-ebf7b5d8dc2c
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - webform
+_core:
+  default_config_hash: 4c0TuvKtDfzMYP0VXwiMzBeZa_BT-VoQgblY7MB12nk
+id: titles
+label: Titres
+category: Demographic
+options: "Miss: Miss\nMs: Ms\nMr: Mr\nMrs: Mrs\nDr: Dr\n"

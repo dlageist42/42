@@ -1,0 +1,20 @@
+uuid: 16341026-a5e8-47fa-83f9-f5b924e9e2bb
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+_core:
+  default_config_hash: 7BomQF0UTKOMtaVmtki70vSEzq6nUpEYhDeqA1LUwi4
+id: media.image.created
+field_name: created
+entity_type: media
+bundle: image
+label: Created
+description: 'The time that the media was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

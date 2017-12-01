@@ -1,0 +1,9 @@
+uuid: 715fa68c-8745-4f97-9a61-f138ca555a08
+langcode: fr
+status: true
+dependencies: {  }
+id: node_type_opinion
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

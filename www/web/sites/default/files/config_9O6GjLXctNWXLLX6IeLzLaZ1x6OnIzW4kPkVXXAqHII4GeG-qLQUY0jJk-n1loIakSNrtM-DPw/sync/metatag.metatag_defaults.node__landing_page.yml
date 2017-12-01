@@ -1,0 +1,12 @@
+uuid: 66abc6fd-c8b0-4142-b889-3993f236900a
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: EXIOXAEmETpbTByxV3sxv8HJfkaUAYU9F5PTuzhLzag
+id: node__landing_page
+label: 'Content: Landing page'
+tags:
+  title: '[node:title] | [site:name]'
+  description: '[node:field_description:value]'
+  schema_web_page_type: WebPage

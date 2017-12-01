@@ -1,0 +1,16 @@
+uuid: f289aef5-0b54-4879-ba66-b23a2e230d9a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Z-g7Jl09ojALKA4Fb4Wt66mpgRqRgxIIEL33nhlKWKc
+id: content_node
+label: 'Content node'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria: {  }
+selection_logic: and
+weight: 0
+relationships: {  }

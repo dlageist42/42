@@ -1,0 +1,20 @@
+uuid: ff109a92-2ce1-45b0-a793-72b546ab7015
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.document
+_core:
+  default_config_hash: JeUc-5l7Lj8R62X-5D9Lo46Cv2LOV5cqbx1OAsIaaKs
+id: media.document.revision_log
+field_name: revision_log
+entity_type: media
+bundle: document
+label: 'Revision Log'
+description: 'The log entry explaining the changes in this revision.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

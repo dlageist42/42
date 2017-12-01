@@ -1,0 +1,6 @@
+identity: drupal
+facility: 128
+format: '!base_url|!timestamp|!type|!ip|!request_uri|!referer|!uid|!link|!message'
+_core:
+  default_config_hash: utl0mL8F_HapgxjfUlNc6rYFB54g0pls-fhqeU0FBfE
+langcode: fr

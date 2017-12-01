@@ -1,0 +1,22 @@
+uuid: fb0afdb8-95a6-4bf6-b0d3-bc6a0019b340
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.video
+_core:
+  default_config_hash: Fdgnbb7IGcK_abHwY46j77LrDCrTpgv28nPhVadY_Ro
+id: media.video.name
+field_name: name
+entity_type: media
+bundle: video
+label: 'Media name'
+description: 'The name of this media.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

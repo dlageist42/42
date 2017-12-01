@@ -1,0 +1,16 @@
+uuid: 4b3bf69d-70e7-4944-ae81-cebaf770bcfc
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
+id: authenticated
+label: 'Utilisateur authentifié'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'use text format basic_html'
+  - userprotect.account.edit
+  - userprotect.mail.edit
+  - userprotect.pass.edit

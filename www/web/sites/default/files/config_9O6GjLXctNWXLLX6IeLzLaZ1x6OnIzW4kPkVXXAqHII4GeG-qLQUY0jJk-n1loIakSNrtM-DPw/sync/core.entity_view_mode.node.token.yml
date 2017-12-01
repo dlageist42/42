@@ -1,0 +1,12 @@
+uuid: 812fc251-ac39-429a-845c-98966716e393
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: vIX64lRX14_lPePewHfWVFSyTfJt0Yh-Lja05UgP8N0
+id: node.token
+label: 'Jeton (token)'
+targetEntityType: node
+cache: true

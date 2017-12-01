@@ -1,0 +1,29 @@
+uuid: 0a11a6e2-b871-429e-a6f0-3c44e0d06396
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject
+    - node.type.opinion
+    - taxonomy.vocabulary.subject
+id: node.opinion.field_subject
+field_name: field_subject
+entity_type: node
+bundle: opinion
+label: Sujet
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      subject: subject
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

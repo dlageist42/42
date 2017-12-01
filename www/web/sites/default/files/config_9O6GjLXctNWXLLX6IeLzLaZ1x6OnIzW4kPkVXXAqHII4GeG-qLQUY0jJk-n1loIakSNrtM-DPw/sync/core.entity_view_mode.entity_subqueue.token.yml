@@ -1,0 +1,12 @@
+uuid: c91065fb-2e59-406e-9cb9-7053be67346e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - entityqueue
+_core:
+  default_config_hash: Rw4MnFMi88rho7zJ-tMpU0QExz7lApq9XzxdHuB0IH8
+id: entity_subqueue.token
+label: 'Jeton (token)'
+targetEntityType: entity_subqueue
+cache: true

@@ -1,0 +1,9 @@
+uuid: f9b2344c-8213-49e7-9fa9-35a1bc81d384
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iRpWR1H8F3UyYcYpMyMfbRCODZ8O3sH2NvRMkpBP2Es
+id: administer_file_system
+label: 'Administer file system'
+path: admin/config/media/file-system

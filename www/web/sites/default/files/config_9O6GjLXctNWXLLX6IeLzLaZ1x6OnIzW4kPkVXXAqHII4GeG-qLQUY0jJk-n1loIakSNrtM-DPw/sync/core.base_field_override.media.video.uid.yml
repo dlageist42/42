@@ -1,0 +1,22 @@
+uuid: 8eda2673-613b-483e-8299-8831250ae52b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.video
+_core:
+  default_config_hash: t7Mri9OrgXyELqTwYg_VKOXqAiAiehE4-0Ac7fouVoo
+id: media.video.uid
+field_name: uid
+entity_type: media
+bundle: video
+label: 'Publisher ID'
+description: 'The user ID of the media publisher.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media_entity\Entity\Media::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

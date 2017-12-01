@@ -1,0 +1,20 @@
+uuid: 0b8db78b-b01b-40b5-8ed3-a72396c8fb4f
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.video
+_core:
+  default_config_hash: VN7Qdp7ra8izK3RIqKjaxB514R0Jn7lYLRNGGaB_xmg
+id: media.video.changed
+field_name: changed
+entity_type: media
+bundle: video
+label: Changed
+description: 'The time that the media was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,28 @@
+uuid: 88c93ec3-a7c3-45d8-a65a-fb2efdf01e90
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_audition
+    - node.type.opinion
+    - node.type.video_audition
+id: node.opinion.field_audition
+field_name: field_audition
+entity_type: node
+bundle: opinion
+label: Audition
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      video_audition: video_audition
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

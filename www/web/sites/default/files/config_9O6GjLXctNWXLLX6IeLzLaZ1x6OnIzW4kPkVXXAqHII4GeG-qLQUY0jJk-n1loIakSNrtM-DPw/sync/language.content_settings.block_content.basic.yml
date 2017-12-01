@@ -1,0 +1,18 @@
+uuid: b30194de-82d2-497f-8a52-ab1b337e42cc
+langcode: fr
+status: true
+dependencies:
+  config:
+    - block_content.type.basic
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+_core:
+  default_config_hash: b44DjC4UsH-TqtNVgkG97y1Ufb-qVMh-hoz2ZknugI8
+id: block_content.basic
+target_entity_type_id: block_content
+target_bundle: basic
+default_langcode: und
+language_alterable: true

@@ -1,0 +1,21 @@
+uuid: 3891d932-39a8-4d53-b3be-8193538e0e29
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_summary
+    - node.type.opinion
+  module:
+    - text
+id: node.opinion.field_summary
+field_name: field_summary
+entity_type: node
+bundle: opinion
+label: Chapô
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

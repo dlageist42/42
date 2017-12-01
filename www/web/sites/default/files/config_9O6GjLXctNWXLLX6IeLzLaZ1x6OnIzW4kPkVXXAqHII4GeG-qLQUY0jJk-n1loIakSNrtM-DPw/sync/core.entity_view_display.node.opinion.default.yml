@@ -1,0 +1,82 @@
+uuid: e3888251-9892-4117-ad2b-4e8a4b771f72
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.opinion.body
+    - field.field.node.opinion.field_audition
+    - field.field.node.opinion.field_date
+    - field.field.node.opinion.field_intervention_media
+    - field.field.node.opinion.field_linked_files
+    - field.field.node.opinion.field_opinion_summary
+    - field.field.node.opinion.field_opinion_text
+    - field.field.node.opinion.field_subject
+    - field.field.node.opinion.field_summary
+    - node.type.opinion
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.opinion.default
+targetEntityType: node
+bundle: opinion
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_audition:
+    weight: 5
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'd F Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_linked_files:
+    weight: 6
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_opinion_summary:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_opinion_text:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_summary:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_intervention_media: true
+  field_subject: true
+  langcode: true
+  links: true

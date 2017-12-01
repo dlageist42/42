@@ -1,0 +1,12 @@
+uuid: 70feee33-7cef-4111-9a9e-cb002f36eb4e
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8067tXMhIQ4EhbztlDqiFPr2csndWxQISB8fj6IyXJg
+id: taxonomy_term
+label: 'Terme de taxonomie'
+tags:
+  title: '[term:name] | [site:name]'
+  description: '[term:description]'
+  abstract: '[term:description]'

@@ -1,0 +1,47 @@
+uuid: a3c62856-615a-4b6c-b9b3-84f61d1b2057
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.video_audition.body
+    - field.field.node.video_audition.field_attachments
+    - field.field.node.video_audition.field_date
+    - node.type.video_audition
+  module:
+    - datetime
+    - file
+    - text
+    - user
+id: node.video_audition.default
+targetEntityType: node
+bundle: video_audition
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_attachments:
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_date:
+    weight: 102
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

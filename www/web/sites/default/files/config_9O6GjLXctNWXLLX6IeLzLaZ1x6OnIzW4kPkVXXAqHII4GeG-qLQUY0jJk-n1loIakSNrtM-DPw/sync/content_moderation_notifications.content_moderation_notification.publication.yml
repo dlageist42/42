@@ -1,0 +1,18 @@
+uuid: 90749dc1-dba0-46c0-9f60-9603dcb3bdf1
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6I4iev6YA3N8WjG-ljuWslPvLhKL1NV4Ak4chfIqsJQ
+id: publication
+workflow: editorial
+transitions:
+  publish: publish
+roles: {  }
+author: true
+emails: ''
+subject: '[site:name] - Contenu publié'
+body:
+  value: "Bonjour,\r\n\r\nLe contenu <a href=\"[site:url]node/[node:nid]\" >[node:title] </a> est publié sur le site de <a href=\"[site:url]\">[site:name]</a>\r\n\r\n[node:log]\r\n\r\nCordialement,"
+  format: restricted_html
+label: Publication

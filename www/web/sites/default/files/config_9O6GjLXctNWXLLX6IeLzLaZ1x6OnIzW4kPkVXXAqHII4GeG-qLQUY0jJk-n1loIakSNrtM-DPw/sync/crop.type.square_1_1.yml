@@ -1,0 +1,14 @@
+uuid: bf9b51f4-746d-45eb-acc4-41a7a437e985
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ztV8sosc9V66N6G0yUEzJCu5st3nqb8ct3YCZr-boxY
+label: 'Square 1:1'
+id: square_1_1
+description: 'Image aspect ratios 1:1 classic square image'
+aspect_ratio: '1:1'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

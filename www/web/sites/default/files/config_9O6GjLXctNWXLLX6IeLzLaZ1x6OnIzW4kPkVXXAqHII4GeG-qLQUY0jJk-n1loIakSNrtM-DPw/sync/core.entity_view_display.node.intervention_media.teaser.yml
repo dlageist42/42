@@ -1,0 +1,29 @@
+uuid: 61759395-894f-4c55-bedb-fcd8adda76de
+langcode: fr
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.intervention_media.body
+    - node.type.intervention_media
+  module:
+    - text
+    - user
+id: node.intervention_media.teaser
+targetEntityType: node
+bundle: intervention_media
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

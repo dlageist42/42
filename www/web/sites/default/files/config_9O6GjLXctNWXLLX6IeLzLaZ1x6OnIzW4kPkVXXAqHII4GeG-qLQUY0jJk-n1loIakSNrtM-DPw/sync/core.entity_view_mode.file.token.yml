@@ -1,0 +1,12 @@
+uuid: 0183cde8-f7f6-4d2b-9579-3f1ffced8f8d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - file
+_core:
+  default_config_hash: T6IiNXJhdrBudWJ_guxnUz3p71T0lFcidLSTM9VlFl8
+id: file.token
+label: 'Jeton (token)'
+targetEntityType: file
+cache: true

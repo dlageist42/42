@@ -1,0 +1,21 @@
+uuid: 0dfe0d87-aaa1-4ea3-850a-494f53e6c562
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_opinion_summary
+    - node.type.opinion
+  module:
+    - text
+id: node.opinion.field_opinion_summary
+field_name: field_opinion_summary
+entity_type: node
+bundle: opinion
+label: 'Resume de l''avis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

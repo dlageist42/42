@@ -1,0 +1,22 @@
+uuid: 03c34716-d45d-4595-a210-7d31b9f87d0b
+langcode: fr
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+_core:
+  default_config_hash: WRvqkSjvJIMfnSJmRObufea32suS3YEUc0Jeb8giVbk
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: 'Media name'
+description: 'The name of this media.'
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string
