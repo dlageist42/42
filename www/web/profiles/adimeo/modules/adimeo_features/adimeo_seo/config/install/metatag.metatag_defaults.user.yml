@@ -1,8 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: user
-label: Utilisateur
-tags:
-  title: '[user:name] | [site:name]'
-  og_type: profile

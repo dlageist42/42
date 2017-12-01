@@ -1,8 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: '404'
-label: 'Page 404 non trouvée'
-tags:
-  canonical_url: '[site:url]'
-  shortlink: '[site:url]'

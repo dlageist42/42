@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-name: default
-label: Default
-effects: {  }
-pipeline: ''

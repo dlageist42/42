@@ -1,7 +1,0 @@
-langcode: fr
-status: true
-dependencies: {  }
-id: contributeur
-label: Contributeur
-weight: 3
-is_admin: null

@@ -1,6 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: text_and_image
-label: 'Text and image'
-behavior_plugins: {  }
